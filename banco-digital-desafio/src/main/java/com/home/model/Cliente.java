@@ -1,13 +1,10 @@
 package com.home.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter @AllArgsConstructor
 public class Cliente {
     private String nome;
-
-    public Cliente(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
 }

@@ -1,5 +1,8 @@
 package com.home.model;
 
+import lombok.Getter;
+
+@Getter
 public abstract class ContaBancaria implements ContaBancariaInterface{
     private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
@@ -32,18 +35,6 @@ public abstract class ContaBancaria implements ContaBancariaInterface{
     public void transferir(double valor, ContaBancariaInterface contaDestino) {
         this.sacar(valor);
         contaDestino.depositar(valor);
-    }
-
-    public Integer getAgencia() {
-        return agencia;
-    }
-
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
     }
 
     @Override
